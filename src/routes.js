@@ -34,7 +34,7 @@ export const routes = [
     path: "/bar"
   },
   {
-    component: <Content title="/home" render={props => <Home />} />,
+    component: <Content title="/home" render={() => <Home />} />,
     path: "/"
   }
 ];
