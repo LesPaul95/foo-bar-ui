@@ -1,17 +1,17 @@
-import React from 'react';
-import { TodoItem } from '../../components/todo-item';
-import { ErrorButton } from '../../components/error-button';
-import './bar.css';
+import React from "react";
+import { TodoItem } from "../../components/todo-item";
+import { ErrorButton } from "../../components/error-button";
+import "./bar.css";
 
 export class BarPage extends React.Component {
   async componentDidMount() {
     await this.props.fetchUsers();
     this.props.fetchTodos();
-	}
+  }
 
-	render() {
-		const { todos, users, fetchError } = this.props;
-		return (
+  render() {
+    const { todos, users, fetchError } = this.props;
+    return (
       <>
         <ErrorButton handleClick={fetchError} label="Test error" />
         {todos.map(el => {
@@ -29,5 +29,6 @@ export class BarPage extends React.Component {
           );
         })}
       </>
-    );}
+    );
+  }
 }

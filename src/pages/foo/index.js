@@ -1,1 +1,1 @@
-export { FooPage } from './foo';
+export { FooPage } from "./foo";

@@ -1,1 +1,1 @@
-export { BarPage } from './bar';
+export { BarPage } from "./bar";

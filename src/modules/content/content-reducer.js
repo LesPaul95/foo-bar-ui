@@ -4,7 +4,7 @@ import {
   ADD_TODO_SUCCESS,
   ADD_USERS_SUCCESS,
   RESET_STORE
-} from './content-action-types.js';
+} from "./content-action-types.js";
 
 const initialState = {
   loading: false,
@@ -14,7 +14,6 @@ const initialState = {
 };
 
 export function contentReducer(state = initialState, action) {
-  console.log(action);
   switch (action.type) {
     case ASYNC_STARTED:
       return {
@@ -44,7 +43,7 @@ export function contentReducer(state = initialState, action) {
     case RESET_STORE:
       return {
         ...initialState
-      }
+      };
     default:
       return state;
   }

@@ -1,14 +1,14 @@
-import { fetch } from '../../utils/fetch';
+import { fetch } from "../../utils/fetch";
 import {
   ASYNC_FAILED,
   ASYNC_STARTED,
   ADD_TODO_SUCCESS,
   ADD_USERS_SUCCESS,
   RESET_STORE
-} from './content-action-types.js';
+} from "./content-action-types.js";
 
 export const fetchUsers = () => dispatch => {
-    dispatch(addAsyncStarted());
+  dispatch(addAsyncStarted());
   return fetch
     .get("https://jsonplaceholder.typicode.com/users")
     .then(res => {
@@ -33,13 +33,13 @@ export const fetchTodos = () => dispatch => {
 
 export const fetchError = () => dispatch => {
   dispatch(addAsyncStarted());
-  setTimeout(()=> {
+  setTimeout(() => {
     try {
-      throw new Error('oops')
-    } catch(err) {
+      throw new Error("oops");
+    } catch (err) {
       dispatch(addAsyncFailure(err));
-    }}
-    , 2000)
+    }
+  }, 2000);
 };
 
 const addAsyncFailure = error => ({
@@ -62,6 +62,5 @@ const addUsersSuccess = users => ({
 });
 
 export const resetStore = () => ({
-  type: RESET_STORE,
+  type: RESET_STORE
 });
-

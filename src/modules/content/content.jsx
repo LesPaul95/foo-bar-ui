@@ -1,13 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { Title } from '../../components/title';
+import React from "react";
+import { connect } from "react-redux";
+import { Title } from "../../components/title";
 import { ErrorButton } from "../../components/error-button";
-import { fetchUsers, fetchTodos, fetchError, resetStore } from './content-actions';
-import './content.css';
+import {
+  fetchUsers,
+  fetchTodos,
+  fetchError,
+  resetStore
+} from "./content-actions";
+import "./content.css";
 
 class ContentComponent extends React.Component {
   render() {
-		return (
+    return (
       <>
         {!!this.props.error && (
           <div className="content">
@@ -25,8 +30,9 @@ class ContentComponent extends React.Component {
           </div>
         )}
       </>
-    );}
-};
+    );
+  }
+}
 
 const mapStateToProps = state => ({
   users: state.content.users,
