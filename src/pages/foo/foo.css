@@ -1,0 +1,15 @@
+.foo-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.user-item {
+    background: #CCFFFF;
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}

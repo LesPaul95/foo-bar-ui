@@ -1,0 +1,17 @@
+.todo-container {
+    background: #CCFFFF;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
