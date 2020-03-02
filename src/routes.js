@@ -1,7 +1,7 @@
 import React from 'react';
 import { Content } from './modules/content';
 import { FooPage } from './pages/foo';
-import { BarPage } from "./pages/bar";
+import { BarPage } from './pages/bar';
 import { Home } from "./pages/home";
 
 export const routes = [

@@ -1,5 +1,5 @@
 .todo-container {
-    background: #CCFFFF;
+    background-color: #CCFFFF;
     display: flex;
     flex-direction: column;
     width: 500px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './foo.css';
 
 export class FooPage extends React.Component {

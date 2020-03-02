@@ -4,7 +4,7 @@
     justify-content: space-around;
 }
 .user-item {
-    background: #CCFFFF;
+    background-color: #CCFFFF;
     display: flex;
     width: 500px;
     justify-content: space-evenly;

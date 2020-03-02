@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './todo-item.css';
 
 export const TodoItem = ({ user, title, completed }) => (

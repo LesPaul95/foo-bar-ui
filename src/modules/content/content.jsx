@@ -1,6 +1,7 @@
 import React from 'react';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import { Title } from '../../components/title';
+import { ErrorButton } from "../../components/error-button";
 import { fetchUsers, fetchTodos, fetchError, resetStore } from './content-actions';
 import './content.css';
 
@@ -13,9 +14,7 @@ class ContentComponent extends React.Component {
             <h1>Sorry</h1>
             <p>We have an error</p>
             <p>Description: {this.props.error.message}</p>
-            <button className="btn-error" onClick={this.props.resetStore}>
-              Reload
-            </button>
+            <ErrorButton handleClick={this.props.resetStore} label="Reload" />
           </div>
         )}
         {!this.props.error && (

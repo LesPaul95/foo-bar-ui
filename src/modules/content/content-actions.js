@@ -5,11 +5,11 @@ import {
   ADD_TODO_SUCCESS,
   ADD_USERS_SUCCESS,
   RESET_STORE
-} from "./content-action-types.js";
+} from './content-action-types.js';
 
 export const fetchUsers = () => dispatch => {
     dispatch(addAsyncStarted());
-  fetch
+  return fetch
     .get("https://jsonplaceholder.typicode.com/users")
     .then(res => {
       dispatch(addUsersSuccess(res.data));
@@ -21,7 +21,7 @@ export const fetchUsers = () => dispatch => {
 
 export const fetchTodos = () => dispatch => {
   dispatch(addAsyncStarted());
-  fetch
+  return fetch
     .get("https://jsonplaceholder.typicode.com/todos")
     .then(res => {
       dispatch(addTodoSuccess(res.data));
@@ -61,7 +61,7 @@ const addUsersSuccess = users => ({
   payload: users
 });
 
-export const resetStore = users => ({
+export const resetStore = () => ({
   type: RESET_STORE,
 });
 
